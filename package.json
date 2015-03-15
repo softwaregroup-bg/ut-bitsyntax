@@ -6,11 +6,7 @@
     "name": "ut-bitsyntax",
     "description": "Pattern-matching on byte buffers",
     "license": "MIT",
-    "version": "0.0.4",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/squaremo/bitsyntax-js.git"
-    },
+    "version": "5.0.0",
     "main": "./index",
     "scripts": {
         "test": "make test",
@@ -26,5 +22,12 @@
     },
     "devDependencies": {
         "mocha": "1.x"
+    },
+    "publishConfig": {
+        "registry": "http://npm.softwaregroup-bg.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@git.softwaregroup-bg.com:ut5/ut-bitsyntax.git"
     }
 }
