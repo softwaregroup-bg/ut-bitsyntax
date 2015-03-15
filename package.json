@@ -24,7 +24,7 @@
         "mocha": "1.x"
     },
     "publishConfig": {
-        "registry": "http://npm.softwaregroup-bg.com"
+        "registry": "http://npm.softwaregroup-bg.com:5001"
     },
     "repository": {
         "type": "git",
