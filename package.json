@@ -1,33 +1,33 @@
 {
-    "author": {
-        "name": "Michael Bridgen",
-        "email": "<mikeb@squaremobius.net>"
-    },
-    "name": "ut-bitsyntax",
-    "description": "Pattern-matching on byte buffers",
-    "license": "MIT",
-    "version": "5.0.0",
-    "main": "./index",
-    "scripts": {
-        "test": "make test",
-        "prepublish": "./node_modules/.bin/pegjs lib/grammar.pegjs lib/parser.js",
-        "postinstall": "./node_modules/.bin/pegjs lib/grammar.pegjs lib/parser.js"
-    },
-    "engines": {
-        "node": ">=0.6"
-    },
-    "dependencies": {
-        "pegjs": "0.8.x",
-        "buffer-more-ints": "0.0.2"
-    },
-    "devDependencies": {
-        "mocha": "1.x"
-    },
-    "publishConfig": {
-        "registry": "http://npm.softwaregroup-bg.com:5001"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@git.softwaregroup-bg.com:ut5/ut-bitsyntax.git"
-    }
+  "author": {
+    "name": "Michael Bridgen",
+    "email": "<mikeb@squaremobius.net>"
+  },
+  "name": "ut-bitsyntax",
+  "description": "Pattern-matching on byte buffers",
+  "license": "MIT",
+  "version": "5.0.1",
+  "main": "./index",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "./node_modules/.bin/pegjs lib/grammar.pegjs lib/parser.js",
+    "postinstall": "./node_modules/.bin/pegjs lib/grammar.pegjs lib/parser.js"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "pegjs": "0.8.x",
+    "buffer-more-ints": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "1.x"
+  },
+  "publishConfig": {
+    "registry": "http://npm.softwaregroup-bg.com:5001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.softwaregroup-bg.com:ut5/ut-bitsyntax.git"
+  }
 }
