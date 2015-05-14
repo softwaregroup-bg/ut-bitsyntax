@@ -10,7 +10,7 @@
     "main": "./index",
     "scripts": {
         "test": "make test",
-        "prepublish": "make all",
+        "prepublish": "./node_modules/.bin/pegjs lib/grammar.pegjs lib/parser.js",
         "postinstall": "./node_modules/.bin/pegjs lib/grammar.pegjs lib/parser.js"
     },
     "engines": {
