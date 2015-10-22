@@ -6,7 +6,7 @@
   "name": "ut-bitsyntax",
   "description": "Pattern-matching on byte buffers",
   "license": "MIT",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "main": "./index",
   "scripts": {
     "test": "make test",
