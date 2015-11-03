@@ -4,7 +4,7 @@
     "email": "<mikeb@squaremobius.net>"
   },
   "name": "ut-bitsyntax",
-  "description": "Pattern-matching on byte buffers",
+  "description": "Pattern-matching on byte buffers - post commit test",
   "license": "MIT",
   "version": "5.0.3",
   "main": "./index.js",
