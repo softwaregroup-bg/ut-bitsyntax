@@ -11,7 +11,12 @@
   "scripts": {
     "test": "make test",
     "prepublish": "pegjs lib/grammar.pegjs lib/parser.js",
-    "postinstall": "pegjs lib/grammar.pegjs lib/parser.js"
+    "postinstall": "pegjs lib/grammar.pegjs lib/parser.js",
+    "lint": "ut-lint .",
+    "pre-commit": "npm run lint",
+    "pre-release": "ut-pre-release",
+    "release": "ut-release",
+    "post-release": "ut-post-release"
   },
   "engines": {
     "node": ">=0.6"
@@ -21,7 +26,8 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "mocha": "1.x"
+    "mocha": "1.x",
+    "ut-tools": "~1.0.0"
   },
   "publishConfig": {
     "registry": "http://npm.softwaregroup-bg.com:5001"
