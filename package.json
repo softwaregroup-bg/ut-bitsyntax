@@ -9,14 +9,22 @@
   "version": "5.0.8",
   "main": "./index.js",
   "scripts": {
-    "test": "make test",
+    "test": "ut-test",
     "prepublish": "pegjs lib/grammar.pegjs lib/parser.js",
     "postinstall": "pegjs lib/grammar.pegjs lib/parser.js",
     "lint": "ut-lint .",
-    "pre-commit": "npm run lint",
-    "pre-release": "ut-pre-release",
     "release": "ut-release",
-    "post-release": "ut-post-release"
+    "changelog": "ut-changelog",
+    "check": "ut-check",
+    "cover": "ut-cover",
+    "lint-js": "ut-lint-js .",
+    "postpublish": "ut-postpublish",
+    "postversion": "ut-postversion",
+    "precommit": "ut-precommit",
+    "prepush": "ut-prepush",
+    "pretest": "ut-pretest",
+    "preversion": "ut-preversion",
+    "version": "ut-version"
   },
   "engines": {
     "node": ">=0.6"
@@ -27,10 +35,10 @@
   },
   "devDependencies": {
     "mocha": "1.x",
-    "ut-tools": "~1.0.0"
+    "ut-tools": "^5.3.1"
   },
   "publishConfig": {
-    "registry": "http://npm.softwaregroup-bg.com:5001"
+    "registry": "https://nexus.softwaregroup-bg.com/repository/npm-internal"
   },
   "repository": {
     "type": "git",
