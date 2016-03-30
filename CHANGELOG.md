@@ -1,3 +1,9 @@
+<a name="5.0.11"></a>
+## [5.0.11](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.10...v5.0.11) (2016-03-30)
+
+
+
+
 <a name="5.0.10"></a>
 ## [5.0.10](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.7...v5.0.10) (2016-03-30)
 
