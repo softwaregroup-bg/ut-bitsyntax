@@ -34,7 +34,6 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "mocha": "1.x",
     "ut-tools": "^5.3.1"
   },
   "publishConfig": {
