@@ -1,3 +1,13 @@
+<a name="5.0.13"></a>
+## [5.0.13](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.12...v5.0.13) (2016-03-31)
+
+
+### Bug Fixes
+
+* use constant dependencies ([b108ab9](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/commit/b108ab9))
+
+
+
 <a name="5.0.12"></a>
 ## [5.0.12](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.11...v5.0.12) (2016-03-30)
 
