@@ -1,3 +1,13 @@
+<a name="5.0.14"></a>
+## [5.0.14](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.13...v5.0.14) (2016-04-15)
+
+
+### Features
+
+* add Gitlab-ci and Jenkins scripts ([1228bfa](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/commit/1228bfa))
+
+
+
 <a name="5.0.13"></a>
 ## [5.0.13](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.12...v5.0.13) (2016-03-31)
 
