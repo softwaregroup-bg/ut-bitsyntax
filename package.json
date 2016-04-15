@@ -10,7 +10,7 @@
   "main": "./index.js",
   "scripts": {
     "test": "ut-test",
-    "prepublish": "pegjs lib/grammar.pegjs lib/parser.js",
+    "prepublish": "ut-prepublish",
     "postinstall": "pegjs lib/grammar.pegjs lib/parser.js",
     "lint": "ut-lint .",
     "release": "ut-release",
@@ -24,7 +24,9 @@
     "prepush": "ut-prepush",
     "pretest": "ut-pretest",
     "preversion": "ut-preversion",
-    "version": "ut-version"
+    "version": "ut-version",
+    "jenkins": "ut-jenkins",
+    "gitlab": "ut-gitlab"
   },
   "engines": {
     "node": ">=0.6"
@@ -34,7 +36,7 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "ut-tools": "^5.3.1"
+    "ut-tools": "^5.3.13"
   },
   "publishConfig": {
     "registry": "https://nexus.softwaregroup-bg.com/repository/npm-internal"
