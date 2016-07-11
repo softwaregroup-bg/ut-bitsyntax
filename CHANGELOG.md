@@ -1,3 +1,13 @@
+<a name="5.4.1"></a>
+## [5.4.1](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.14...v5.4.1) (2016-07-11)
+
+
+### Features
+
+* upgrade dependencies ([12a2834](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/commit/12a2834))
+
+
+
 <a name="5.0.14"></a>
 ## [5.0.14](https://git.softwaregroup-bg.com/ut5/ut-bitsyntax/compare/v5.0.13...v5.0.14) (2016-04-15)
 
