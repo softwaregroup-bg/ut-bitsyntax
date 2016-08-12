@@ -5,7 +5,7 @@
   },
   "name": "ut-bitsyntax",
   "description": "Pattern-matching on byte buffers.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "version": "5.4.1",
   "main": "./index.js",
   "scripts": {
@@ -36,13 +36,10 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "ut-tools": "^5.4.1"
-  },
-  "publishConfig": {
-    "registry": "https://nexus.softwaregroup-bg.com/repository/npm-internal"
+    "ut-tools": "^5.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.softwaregroup-bg.com:ut5/ut-bitsyntax.git"
+    "url": "git@github.com:softwaregroup-bg/ut-bitsyntax.git"
   }
 }
