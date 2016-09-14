@@ -6,7 +6,7 @@
   "name": "ut-bitsyntax",
   "description": "Pattern-matching on byte buffers.",
   "license": "Apache-2.0",
-  "version": "5.4.2",
+  "version": "6.0.0",
   "main": "./index.js",
   "scripts": {
     "test": "ut-test",

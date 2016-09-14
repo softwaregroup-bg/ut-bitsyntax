@@ -1,3 +1,18 @@
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v5.4.2...v6.0.0) (2016-09-14)
+
+
+### Features
+
+* improve error handling ([226953f](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/226953f))
+
+
+### BREAKING CHANGES
+
+* Missing zero terminated string or binary fields should be accepted.
+
+
+
 <a name="5.4.2"></a>
 ## [5.4.2](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v5.4.1...v5.4.2) (2016-08-12)
 
