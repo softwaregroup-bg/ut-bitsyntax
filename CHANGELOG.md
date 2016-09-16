@@ -1,3 +1,13 @@
+<a name="6.0.1"></a>
+## [6.0.1](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.0...v6.0.1) (2016-09-16)
+
+
+### Bug Fixes
+
+* return empty string(not false) when 0 ecountered ([265e699](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/265e699))
+
+
+
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v5.4.2...v6.0.0) (2016-09-14)
 
