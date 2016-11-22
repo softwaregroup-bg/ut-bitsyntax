@@ -1,3 +1,13 @@
+<a name="6.0.4"></a>
+## [6.0.4](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.3...v6.0.4) (2016-11-22)
+
+
+### Bug Fixes
+
+* allov variables for padding ([e456b14](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/e456b14))
+
+
+
 <a name="6.0.3"></a>
 ## [6.0.3](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.2...v6.0.3) (2016-11-01)
 
