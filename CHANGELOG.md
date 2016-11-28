@@ -1,3 +1,13 @@
+<a name="6.0.5"></a>
+## [6.0.5](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.4...v6.0.5) (2016-11-28)
+
+
+### Bug Fixes
+
+* fix builder issues with string variables ([3e566c4](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/3e566c4))
+
+
+
 <a name="6.0.4"></a>
 ## [6.0.4](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.3...v6.0.4) (2016-11-22)
 
