@@ -1,3 +1,13 @@
+<a name="6.0.6"></a>
+## [6.0.6](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.5...v6.0.6) (2017-02-11)
+
+
+### Bug Fixes
+
+* expect bits var to be integer value ([#2](https://github.com/softwaregroup-bg/ut-bitsyntax/issues/2)) ([823cbc0](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/823cbc0))
+
+
+
 <a name="6.0.5"></a>
 ## [6.0.5](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.4...v6.0.5) (2016-11-28)
 
