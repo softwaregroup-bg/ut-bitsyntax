@@ -66,17 +66,17 @@ suite('Integer',
 // test cases largely constructed in Erlang using e.g.,
 // Pi = math:pi(), <<Pi:32/float>>.
 var FLOAT_TESTS = [
-  ['n:32/float',
-    [[[64, 73, 15, 219], Math.PI], [[0, 0, 0, 0], 0.0]]],
-  ['n:64/float',
-    [[[64, 9, 33, 251, 84, 68, 45, 24], Math.PI], [[0, 0, 0, 0, 0, 0, 0, 0], 0.0]]],
-  ['n:32/float-little',
-    [[[219, 15, 73, 64], Math.PI], [[0, 0, 0, 0], 0.0]]],
-  ['n:64/float-little',
-   [[[24, 45, 68, 84, 251, 33, 9, 64], Math.PI],
-    [[0, 0, 0, 0, 0, 0, 0, 0], 0.0]]],
-  ['n:4/float-unit:8', [[[64, 73, 15, 219], Math.PI],
-    [[0, 0, 0, 0], 0.0]]]
+    ['n:32/float',
+        [[[64, 73, 15, 219], Math.PI], [[0, 0, 0, 0], 0.0]]],
+    ['n:64/float',
+        [[[64, 9, 33, 251, 84, 68, 45, 24], Math.PI], [[0, 0, 0, 0, 0, 0, 0, 0], 0.0]]],
+    ['n:32/float-little',
+        [[[219, 15, 73, 64], Math.PI], [[0, 0, 0, 0], 0.0]]],
+    ['n:64/float-little',
+        [[[24, 45, 68, 84, 251, 33, 9, 64], Math.PI],
+           [[0, 0, 0, 0, 0, 0, 0, 0], 0.0]]],
+    ['n:4/float-unit:8', [[[64, 73, 15, 219], Math.PI],
+        [[0, 0, 0, 0], 0.0]]]
 ];
 
 suite('Float',
@@ -101,10 +101,10 @@ suite('Float',
     });
 
 var BINARY_TESTS = [
-  ['n:0/unit:8-binary', []],
-  ['n:1/unit:8-binary', [93]],
-  ['n:5/unit:8-binary', [1, 2, 3, 4, 5]],
-  ['n:32/unit:1-binary', [255, 254, 253, 252]]
+    ['n:0/unit:8-binary', []],
+    ['n:1/unit:8-binary', [93]],
+    ['n:5/unit:8-binary', [1, 2, 3, 4, 5]],
+    ['n:32/unit:1-binary', [255, 254, 253, 252]]
 ];
 
 suite('Binary',
@@ -132,15 +132,15 @@ suite('Binary',
     });
 
 var VAR_TESTS = [
-  ['size, n:size',
-   [[[8, 5], 5],
-    [[32, 0, 0, 0, 167], 167]]],
+    ['size, n:size',
+        [[[8, 5], 5],
+            [[32, 0, 0, 0, 167], 167]]],
 
-  ['size, n:size/binary',
-   [[[2, 5, 6], new Buffer([5, 6])]]],
+    ['size, n:size/binary',
+        [[[2, 5, 6], new Buffer([5, 6])]]],
 
-  ['a, b:a, n:b',
-   [[[8, 32, 0, 0, 2, 100], 612]]]
+    ['a, b:a, n:b',
+        [[[8, 32, 0, 0, 2, 100], 612]]]
 ];
 
 suite('Environment',
@@ -160,18 +160,17 @@ suite('Environment',
     });
 
 var STRING_TESTS = [
-  ['"foobar", n:8', 'foobarA', 'A'.charCodeAt(0)],
-  ['n:8, "foobar", _/binary', 'CfoobarGARBAGE', 'C'.charCodeAt(0)],
-  ['"foo, :-bar\\"", n:8, "another"', 'foo, :-bar"Zanother', 'Z'.charCodeAt(0)]
+    ['"foobar", n:8', 'foobarA', 'A'.charCodeAt(0)],
+    ['n:8, "foobar", _/binary', 'CfoobarGARBAGE', 'C'.charCodeAt(0)],
+    ['"foo, :-bar\\"", n:8, "another"', 'foo, :-bar"Zanother', 'Z'.charCodeAt(0)]
 ];
 
-suite('String',
-    function() {
-        STRING_TESTS.forEach(function(p) {
-            var pattern = parse(p[0]);
-            test(p[0], function() {
-                var res = match(pattern, new Buffer(p[1]));
-                assert.equal(res.n, p[2]);
-            });
+suite('String', function() {
+    STRING_TESTS.forEach(function(p) {
+        var pattern = parse(p[0]);
+        test(p[0], function() {
+            var res = match(pattern, new Buffer(p[1]));
+            assert.equal(res.n, p[2]);
         });
     });
+});
