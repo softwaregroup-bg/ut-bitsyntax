@@ -1,3 +1,13 @@
+<a name="6.0.7"></a>
+## [6.0.7](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.6...v6.0.7) (2017-03-08)
+
+
+### Bug Fixes
+
+* dependencies ([fa48a66](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/fa48a66))
+
+
+
 <a name="6.0.6"></a>
 ## [6.0.6](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.5...v6.0.6) (2017-02-11)
 
