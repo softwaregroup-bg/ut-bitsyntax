@@ -36,7 +36,7 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "ut-tools": "^5.6.0"
+    "ut-tools": "^5.13.5"
   },
   "repository": {
     "type": "git",
