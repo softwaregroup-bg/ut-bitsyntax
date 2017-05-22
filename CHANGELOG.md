@@ -1,3 +1,8 @@
+<a name="6.0.11"></a>
+## [6.0.11](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.10...v6.0.11) (2017-05-22)
+
+
+
 <a name="6.0.10"></a>
 ## [6.0.10](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.9...v6.0.10) (2017-05-22)
 
