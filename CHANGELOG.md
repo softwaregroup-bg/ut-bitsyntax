@@ -1,3 +1,13 @@
+<a name="6.0.14"></a>
+## [6.0.14](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.13...v6.0.14) (2017-05-26)
+
+
+### Bug Fixes
+
+* uppercase hex ([#3](https://github.com/softwaregroup-bg/ut-bitsyntax/issues/3)) ([410b05a](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/410b05a))
+
+
+
 <a name="6.0.13"></a>
 ## [6.0.13](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.12...v6.0.13) (2017-05-22)
 
