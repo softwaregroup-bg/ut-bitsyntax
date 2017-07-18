@@ -1,3 +1,13 @@
+<a name="6.0.15"></a>
+## [6.0.15](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.14...v6.0.15) (2017-07-18)
+
+
+### Bug Fixes
+
+* implement string-binhex compiler and constructor ([7bd9c6b](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/7bd9c6b))
+
+
+
 <a name="6.0.14"></a>
 ## [6.0.14](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.13...v6.0.14) (2017-05-26)
 
