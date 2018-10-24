@@ -1,3 +1,13 @@
+<a name="6.0.16"></a>
+## [6.0.16](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.15...v6.0.16) (2018-10-24)
+
+
+### Bug Fixes
+
+* move pegjs to dev dependency ([697e5ce](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/697e5ce))
+
+
+
 <a name="6.0.15"></a>
 ## [6.0.15](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.14...v6.0.15) (2017-07-18)
 
