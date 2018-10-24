@@ -11,7 +11,7 @@
   "scripts": {
     "test": "ut-test",
     "prepublish": "ut-prepublish",
-    "postinstall": "pegjs lib/grammar.pegjs lib/parser.js",
+    "compile": "pegjs lib/grammar.pegjs lib/parser.js",
     "lint": "ut-lint .",
     "release": "ut-release",
     "changelog": "ut-changelog",
