@@ -20,6 +20,7 @@
     "lint-js": "ut-lint-js .",
     "postpublish": "ut-postpublish",
     "postversion": "ut-postversion",
+    "precover": "ut-precover",
     "precommit": "ut-precommit",
     "prepush": "ut-prepush",
     "pretest": "ut-pretest",
@@ -35,8 +36,8 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "pegjs": "0.9.0",
-    "ut-tools": "^5.13.5"
+    "pegjs": "0.10.0",
+    "ut-tools": "^6.12.6"
   },
   "repository": {
     "type": "git",
