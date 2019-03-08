@@ -1,3 +1,12 @@
+## [6.0.18](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.17...v6.0.18) (2019-03-08)
+
+
+### Bug Fixes
+
+* pass proper size argument ([#6](https://github.com/softwaregroup-bg/ut-bitsyntax/issues/6)) ([b66267b](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/b66267b))
+
+
+
 <a name="6.0.17"></a>
 ## [6.0.17](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.16...v6.0.17) (2018-10-24)
 
