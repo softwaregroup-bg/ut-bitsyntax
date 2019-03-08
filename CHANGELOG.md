@@ -1,3 +1,12 @@
+## [6.0.19](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.18...v6.0.19) (2019-03-08)
+
+
+### Bug Fixes
+
+* bcd handle unit ([26ce341](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/26ce341))
+
+
+
 ## [6.0.18](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.17...v6.0.18) (2019-03-08)
 
 
