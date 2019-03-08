@@ -1,3 +1,12 @@
+# [6.2.0](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.1.0...v6.2.0) (2019-03-08)
+
+
+### Features
+
+* handle string-bcd in constructor ([2beed2d](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/2beed2d))
+
+
+
 # [6.1.0](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.19...v6.1.0) (2019-03-08)
 
 
