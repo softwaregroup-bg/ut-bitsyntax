@@ -1,3 +1,12 @@
+# [6.1.0](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.19...v6.1.0) (2019-03-08)
+
+
+### Features
+
+* support string-bcd ([3a01988](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/3a01988))
+
+
+
 ## [6.0.19](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.0.18...v6.0.19) (2019-03-08)
 
 
