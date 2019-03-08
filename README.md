@@ -211,8 +211,10 @@ because the lowest eight bits are 0; `'255:16` gives the binary
 
 ### Type name specifier
 
-One of `integer`, `binary`, `string`, `float`, `string-hex`, `string-binary`, `bcd`, `string-z`, `binary-z`. If not given, the
-default is `integer`.
+One of `integer`, `binary`, `string`, `float`,
+`string-hex`, `string-binary`, `bcd`, `string-z`,
+`binary-z`.
+If not given, the default is `integer`.
 
 An integer is a big- or little-endian, signed or unsigned
 integer. Integers up to 32 bits are supported. Signed integers are
@@ -228,7 +230,10 @@ A string is a UTF8 string consisting of the given number of bytes.
 A float is a 32- or 64-bit IEEE754 floating-point value (this is the
 standard JavaScript uses, as do Java and Erlang).
 
-String with padding specifiers: `string-left-zero`, `string-left-space`, `string-right-zero`, `string-right-space`
+String with padding specifiers:
+`string-left-zero`, `string-left-space`,
+`string-right-zero`, `string-right-space`
+
 ### Endianness specifier
 
 Integers may be big- or little-endian; this refers to which 'end' of
@@ -309,27 +314,40 @@ starting with [6, 0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, ...].
 
     a:4/string, b:4/string-hex, c:3/bcd
 
-Matches the buffer [97, 98, 99, 100, 51, 48, 51, 49, 0x00, 0x12, 0x34], result is `{a:"abcd", b: "01", c: 1234}`
+Matches the buffer
+[97, 98, 99, 100, 51, 48, 51, 49, 0x00, 0x12, 0x34],
+result is `{a:"abcd", b: "01", c: 1234}`
 
     d:24/string-binary
 
 Matches the buffer [48, 48, 49, 49, 48, 48, 48, 49,
 48, 48, 49, 49, 48, 48, 49, 48,
-48, 48, 49, 49, 48, 48, 49, 49], 
+48, 48, 49, 49, 48, 48, 49, 49],
   result is `{d:"123"}`
 
     a:10/string-hex
 
-Matches the buffer `Buffer([0x36, 0x64, 0x36, 0x65, 0x36, 0x66, 0x33, 0x31, 0x33, 0x32])` or `Buffer([54, 100, 54, 101, 54, 102, 51, 49, 51, 50])` or `Buffer('6d6e6f3132')`, result is `{a: "mno12"}`
+Matches the buffer
+`Buffer([0x36, 0x64, 0x36, 0x65, 0x36, 0x66, 0x33, 0x31, 0x33, 0x32])`
+or `Buffer([54, 100, 54, 101, 54, 102, 51, 49, 51, 50])`
+or `Buffer('6d6e6f3132')`, result is `{a: "mno12"}`
 
     a:6/string-left-zero
 
-`bitsyntax.build(bitsyntax.parse("a:6/string-left-zero"), {a: "12"})` result is  buffer [48, 48, 48, 48, 49, 50], equivalent of `new Buffer("000012")`
+`bitsyntax.build(bitsyntax.parse("a:6/string-left-zero"), {a: "12"})`
+result is  buffer [48, 48, 48, 48, 49, 50],
+equivalent of `new Buffer("000012")`
 
-	a:4/string-z
-	
-Matches zero terminated string `Buffer([97, 98, 99, 100, 101, 102, 0x00])`, result is `{a: "abcdef"}`
+  a:4/string-z
 
-	a:8/binary-z, b:6/binary-z, r/binary
-	
-Matches zero terminated binary `Buffer([97, 98, 99, 100, 101, 102, 0x00, 97, 98, 0x00, 97, 98, 99])`, result is `{a: Buffer([97, 98, 99, 100, 101, 102]), b: Buffer([97, 98]), r: Buffer([97, 98, 99])}`
+Matches zero terminated string
+`Buffer([97, 98, 99, 100, 101, 102, 0x00])`,
+result is `{a: "abcdef"}`
+
+  a:8/binary-z, b:6/binary-z, r/binary
+
+Matches zero terminated binary
+`Buffer([97, 98, 99, 100, 101, 102, 0x00, 97, 98, 0x00, 97, 98, 99])`,
+result is
+`{a: Buffer([97, 98, 99, 100, 101, 102])`,
+`b: Buffer([97, 98]), r: Buffer([97, 98, 99])}`

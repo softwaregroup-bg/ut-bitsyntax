@@ -6,45 +6,45 @@ var assert = require('assert');
 
 var INT_TESTS = [
     ['n:8',
-     [[[255], 255]]],
+        [[[255], 255]]],
     ['n:8/signed',
-     [[[255], -1]]],
+        [[[255], -1]]],
     ['n:1/unit:8',
-     [[[129], 129]]],
+        [[[129], 129]]],
     ['n:1/unit:8-signed',
-     [[[129], -127]]],
+        [[[129], -127]]],
 
     ['n:16',
-     [[[1, 255], 511]]],
+        [[[1, 255], 511]]],
     ['n:16/signed',
-     [[[255, 65], -191]]],
+        [[[255, 65], -191]]],
     ['n:16/little',
-     [[[255, 1], 511]]],
+        [[[255, 1], 511]]],
     ['n:16/signed-little',
-     [[[65, 255], -191]]],
+        [[[65, 255], -191]]],
 
     ['n:32',
-     [[[45, 23, 97, 102], 756506982]]],
+        [[[45, 23, 97, 102], 756506982]]],
     ['n:32/signed',
-     [[[245, 23, 97, 102], -183017114]]],
+        [[[245, 23, 97, 102], -183017114]]],
     ['n:32/little',
-     [[[245, 23, 97, 102], 1717639157]]],
+        [[[245, 23, 97, 102], 1717639157]]],
     ['n:32/signed-little',
-     [[[245, 23, 97, 129], -2124343307]]],
+        [[[245, 23, 97, 129], -2124343307]]],
 
     ['n:4/signed-little-unit:8',
-     [[[245, 23, 97, 129], -2124343307]]],
+        [[[245, 23, 97, 129], -2124343307]]],
 
     ['n:64',
-     [[[1, 2, 3, 4, 5, 6, 7, 8], 72623859790382856]]],
+        [[[1, 2, 3, 4, 5, 6, 7, 8], 72623859790382856]]],
     ['n:64/signed',
-     [[[255, 2, 3, 4, 5, 6, 7, 8], -71491328285473016]]],
+        [[[255, 2, 3, 4, 5, 6, 7, 8], -71491328285473016]]],
     ['n:64/little',
-     [[[1, 2, 3, 4, 5, 6, 7, 8], 578437695752307201]]],
+        [[[1, 2, 3, 4, 5, 6, 7, 8], 578437695752307201]]],
     ['n:64/little-signed',
-     [[[1, 2, 3, 4, 5, 6, 7, 255], -70080650589044223]]],
+        [[[1, 2, 3, 4, 5, 6, 7, 255], -70080650589044223]]],
     ['n:8/signed-unit:8-little',
-     [[[1, 2, 3, 4, 5, 6, 7, 255], -70080650589044223]]]
+        [[[1, 2, 3, 4, 5, 6, 7, 255], -70080650589044223]]]
 ];
 
 suite('Integer',
@@ -54,10 +54,10 @@ suite('Integer',
             var cpattern = compile(p[0]);
             p[1].forEach(function(tc) {
                 test(p[0], function() {
-                    assert.deepEqual({n: tc[1]}, match(pattern, new Buffer(tc[0])));
+                    assert.strict.deepEqual({n: tc[1]}, match(pattern, Buffer.from(tc[0])));
                 });
                 test(p[0], function() {
-                    assert.deepEqual({n: tc[1]}, cpattern(new Buffer(tc[0])));
+                    assert.strict.deepEqual({n: tc[1]}, cpattern(Buffer.from(tc[0])));
                 });
             });
         });
@@ -74,7 +74,7 @@ var FLOAT_TESTS = [
         [[[219, 15, 73, 64], Math.PI], [[0, 0, 0, 0], 0.0]]],
     ['n:64/float-little',
         [[[24, 45, 68, 84, 251, 33, 9, 64], Math.PI],
-           [[0, 0, 0, 0, 0, 0, 0, 0], 0.0]]],
+            [[0, 0, 0, 0, 0, 0, 0, 0], 0.0]]],
     ['n:4/float-unit:8', [[[64, 73, 15, 219], Math.PI],
         [[0, 0, 0, 0], 0.0]]]
 ];
@@ -87,12 +87,12 @@ suite('Float',
             var cpattern = compile(p[0]);
             p[1].forEach(function(tc) {
                 test(p[0], function() {
-                    var m = match(pattern, new Buffer(tc[0]));
+                    var m = match(pattern, Buffer.from(tc[0]));
                     assert.ok(m.n !== undefined);
                     assert.ok(Math.abs(tc[1] - m.n) < precision);
                 });
                 test(p[0], function() {
-                    var m = cpattern(new Buffer(tc[0]));
+                    var m = cpattern(Buffer.from(tc[0]));
                     assert.ok(m.n !== undefined);
                     assert.ok(Math.abs(tc[1] - m.n) < precision);
                 });
@@ -116,17 +116,17 @@ suite('Binary',
             var patternrest = parse(prest);
             var cpatternrest = compile(prest);
             test(p[0], function() {
-                assert.deepEqual({n: new Buffer(p[1])},
-                                match(pattern, new Buffer(p[1])));
-                assert.deepEqual({n: new Buffer(p[1])},
-                                cpattern(new Buffer(p[1])));
+                assert.strict.deepEqual({n: Buffer.from(p[1])},
+                    match(pattern, Buffer.from(p[1])));
+                assert.strict.deepEqual({n: Buffer.from(p[1])},
+                    cpattern(Buffer.from(p[1])));
             });
             test(prest, function() {
                 var plusgarbage = p[1].concat([5, 98, 23, 244]);
-                assert.deepEqual({n: new Buffer(p[1])},
-                                match(patternrest, new Buffer(plusgarbage)));
-                assert.deepEqual({n: new Buffer(p[1])},
-                                cpatternrest(new Buffer(plusgarbage)));
+                assert.strict.deepEqual({n: Buffer.from(p[1])},
+                    match(patternrest, Buffer.from(plusgarbage)));
+                assert.strict.deepEqual({n: Buffer.from(p[1])},
+                    cpatternrest(Buffer.from(plusgarbage)));
             });
         });
     });
@@ -137,7 +137,7 @@ var VAR_TESTS = [
             [[32, 0, 0, 0, 167], 167]]],
 
     ['size, n:size/binary',
-        [[[2, 5, 6], new Buffer([5, 6])]]],
+        [[[2, 5, 6], Buffer.from([5, 6])]]],
 
     ['a, b:a, n:b',
         [[[8, 32, 0, 0, 2, 100], 612]]]
@@ -150,10 +150,10 @@ suite('Environment',
             var cpattern = compile(p[0]);
             p[1].forEach(function(tc) {
                 test(p[0], function() {
-                    assert.deepEqual(tc[1], match(pattern, new Buffer(tc[0])).n);
+                    assert.strict.deepEqual(tc[1], match(pattern, Buffer.from(tc[0])).n);
                 });
                 test(p[0], function() {
-                    assert.deepEqual(tc[1], cpattern(new Buffer(tc[0])).n);
+                    assert.strict.deepEqual(tc[1], cpattern(Buffer.from(tc[0])).n);
                 });
             });
         });
@@ -169,8 +169,8 @@ suite('String', function() {
     STRING_TESTS.forEach(function(p) {
         var pattern = parse(p[0]);
         test(p[0], function() {
-            var res = match(pattern, new Buffer(p[1]));
-            assert.equal(res.n, p[2]);
+            var res = match(pattern, Buffer.from(p[1]));
+            assert.strict.equal(res.n, p[2]);
         });
     });
 });
