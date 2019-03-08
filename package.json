@@ -36,6 +36,7 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
+    "tap": "^12.5.2",
     "pegjs": "0.10.0",
     "ut-tools": "^6.12.6"
   },
