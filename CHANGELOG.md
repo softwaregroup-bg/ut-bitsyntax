@@ -1,3 +1,12 @@
+## [6.2.1](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.0...v6.2.1) (2019-03-14)
+
+
+### Bug Fixes
+
+* skip empty string, handle zero size integers ([58aa9a3](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/58aa9a3))
+
+
+
 # [6.2.0](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.1.0...v6.2.0) (2019-03-08)
 
 
