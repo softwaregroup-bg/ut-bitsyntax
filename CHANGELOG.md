@@ -1,3 +1,12 @@
+## [6.2.3](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.2...v6.2.3) (2019-03-22)
+
+
+### Bug Fixes
+
+* rename script ([a54eea0](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/a54eea0))
+
+
+
 ## [6.2.2](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.1...v6.2.2) (2019-03-22)
 
 
