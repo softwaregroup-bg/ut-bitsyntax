@@ -36,9 +36,9 @@
     "buffer-more-ints": "0.0.2"
   },
   "devDependencies": {
-    "tap": "^12.5.2",
+    "tap": "^13.1.1",
     "pegjs": "0.10.0",
-    "ut-tools": "^6.12.6"
+    "ut-tools": "^6.30.5"
   },
   "repository": {
     "type": "git",
