@@ -1,3 +1,7 @@
+## [6.2.4](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.3...v6.2.4) (2020-01-17)
+
+
+
 ## [6.2.3](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.2...v6.2.3) (2019-03-22)
 
 
