@@ -168,8 +168,13 @@ var STRING_TESTS = [
 suite('String', function() {
     STRING_TESTS.forEach(function(p) {
         var pattern = parse(p[0]);
+        var cpattern = compile(p[0]);
         test(p[0], function() {
             var res = match(pattern, Buffer.from(p[1]));
+            assert.strict.equal(res.n, p[2]);
+        });
+        test(p[0], function() {
+            var res = cpattern(Buffer.from(p[1]));
             assert.strict.equal(res.n, p[2]);
         });
     });
