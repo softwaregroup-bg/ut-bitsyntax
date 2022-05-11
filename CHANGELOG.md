@@ -1,3 +1,12 @@
+## [6.2.5](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.4...v6.2.5) (2022-05-11)
+
+
+### Bug Fixes
+
+* string literal in matchers ([#13](https://github.com/softwaregroup-bg/ut-bitsyntax/issues/13)) ([3f6a4ae](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/3f6a4ae5af2b159abebff39dc56b96d1994fc867))
+
+
+
 ## [6.2.4](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.3...v6.2.4) (2020-01-17)
 
 
