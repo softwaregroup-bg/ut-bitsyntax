@@ -142,14 +142,18 @@ buf
 Patterns are sequences of segments, each matching a value. Segments
 have the general form
 
+```text
      value:size/type_specifier_list
+```
 
 The size and type specifier list may be omitted, giving three extra
 variations:
 
+```text
     value
     value:size
     value/type_specifier_list
+```
 
 The type specifier list is a list of keywords separated by
 hyphens. Type specifiers are described below.
@@ -179,12 +183,16 @@ not allowed in builder patterns.
 The size of a segment is given following the value or variable,
 separated with a colon:
 
+```text
     foo:32
+```
 
 The unit is given in the list of specifiers as `'unit' and
 an integer from 0..256, separated by a colon:
 
+```text
     foo:4/integer-unit:8
+```
 
 The size is the number of units in the value; the unit is given as a
 number of bits. Unit can be of use, for example, when you want to
@@ -259,7 +267,9 @@ Signedness is ignored in builders.
 A quoted string appearing in a pattern is a shorthand for the bytes in
 its UTF8 encoding. For example,
 
+```text
     "foobar", _/binary
+```
 
 matches any buffer that starts with the bytes `0x66, 0x6f, 0x6f, 0x62,
 0x61, 0x72`.
@@ -275,76 +285,104 @@ the bytes to match against. The phrase "returns X as Y" or "binds X as
 Y" means the return value is an object with value X mapped to the key
 Y.
 
+```text
     54
+```
 
 Matches the single byte `54`.
 
+```text
     54:32
+```
 
 Matches the bytes [0,0,0,54].
 
+```text
     54:32/little
+```
 
 Matches the bytes [54,0,0,0].
 
+```text
     54:4/unit:8
+```
 
 Matches the bytes [0,0,0,54].
 
+```text
     int:32/signed
+```
 
 Matches a binary of four bytes, and returns a signed 32-bit integer as
 `int`.
 
+```text
     len:16, str:len/binary
+```
 
 Matches a binary of `2 + len` bytes, and returns an unsigned 16-bit
 integer as `len` and a buffer of length `len` as `str`.
 
+```text
     len:16, _:len/binary, rest/binary
+```
 
 Matches a binary of at least `2 + len` bytes, binds an unsigned 16-bit
 integer as `len`, ignores the next `len` bytes, and binds the
 remaining (possibly zero-length) binary as `rest`.
 
+```text
     s:8, key:s/binary, value/binary
+```
 
 When given the environment `{s:6, key: "foobar"}`, will match a binary
 starting with [6, 0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, ...].
 
+```text
     a:4/string, b:4/string-hex, c:3/bcd
+```
 
 Matches the buffer
 [97, 98, 99, 100, 51, 48, 51, 49, 0x00, 0x12, 0x34],
 result is `{a:"abcd", b: "01", c: 1234}`
 
+```text
     d:24/string-binary
+```
 
 Matches the buffer [48, 48, 49, 49, 48, 48, 48, 49,
 48, 48, 49, 49, 48, 48, 49, 48,
 48, 48, 49, 49, 48, 48, 49, 49],
   result is `{d:"123"}`
 
+```text
     a:10/string-hex
+```
 
 Matches the buffer
 `Buffer([0x36, 0x64, 0x36, 0x65, 0x36, 0x66, 0x33, 0x31, 0x33, 0x32])`
 or `Buffer([54, 100, 54, 101, 54, 102, 51, 49, 51, 50])`
 or `Buffer('6d6e6f3132')`, result is `{a: "mno12"}`
 
+```text
     a:6/string-left-zero
+```
 
 `bitsyntax.build(bitsyntax.parse("a:6/string-left-zero"), {a: "12"})`
 result is  buffer [48, 48, 48, 48, 49, 50],
 equivalent of `new Buffer("000012")`
 
+```text
   a:4/string-z
+```
 
 Matches zero terminated string
 `Buffer([97, 98, 99, 100, 101, 102, 0x00])`,
 result is `{a: "abcdef"}`
 
-  a:8/binary-z, b:6/binary-z, r/binary
+```text
+   a:8/binary-z, b:6/binary-z, r/binary
+```
 
 Matches zero terminated binary
 `Buffer([97, 98, 99, 100, 101, 102, 0x00, 97, 98, 0x00, 97, 98, 99])`,
