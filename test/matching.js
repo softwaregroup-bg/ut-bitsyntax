@@ -1,10 +1,10 @@
 /* eslint-env mocha */
-var match = require('../').match;
-var parse = require('../').parse;
-var compile = require('../').matcher;
-var assert = require('assert');
+const match = require('../').match;
+const parse = require('../').parse;
+const compile = require('../').matcher;
+const assert = require('assert');
 
-var INT_TESTS = [
+const INT_TESTS = [
     ['n:8',
         [[[255], 255]]],
     ['n:8/signed',
@@ -50,8 +50,8 @@ var INT_TESTS = [
 suite('Integer',
     function() {
         INT_TESTS.forEach(function(p) {
-            var pattern = parse(p[0]);
-            var cpattern = compile(p[0]);
+            const pattern = parse(p[0]);
+            const cpattern = compile(p[0]);
             p[1].forEach(function(tc) {
                 test(p[0], function() {
                     assert.strict.deepEqual({n: tc[1]}, match(pattern, Buffer.from(tc[0])));
@@ -65,7 +65,7 @@ suite('Integer',
 
 // test cases largely constructed in Erlang using e.g.,
 // Pi = math:pi(), <<Pi:32/float>>.
-var FLOAT_TESTS = [
+const FLOAT_TESTS = [
     ['n:32/float',
         [[[64, 73, 15, 219], Math.PI], [[0, 0, 0, 0], 0.0]]],
     ['n:64/float',
@@ -81,18 +81,18 @@ var FLOAT_TESTS = [
 
 suite('Float',
     function() {
-        var precision = 0.00001;
+        const precision = 0.00001;
         FLOAT_TESTS.forEach(function(p) {
-            var pattern = parse(p[0]);
-            var cpattern = compile(p[0]);
+            const pattern = parse(p[0]);
+            const cpattern = compile(p[0]);
             p[1].forEach(function(tc) {
                 test(p[0], function() {
-                    var m = match(pattern, Buffer.from(tc[0]));
+                    const m = match(pattern, Buffer.from(tc[0]));
                     assert.ok(m.n !== undefined);
                     assert.ok(Math.abs(tc[1] - m.n) < precision);
                 });
                 test(p[0], function() {
-                    var m = cpattern(Buffer.from(tc[0]));
+                    const m = cpattern(Buffer.from(tc[0]));
                     assert.ok(m.n !== undefined);
                     assert.ok(Math.abs(tc[1] - m.n) < precision);
                 });
@@ -100,7 +100,7 @@ suite('Float',
         });
     });
 
-var BINARY_TESTS = [
+const BINARY_TESTS = [
     ['n:0/unit:8-binary', []],
     ['n:1/unit:8-binary', [93]],
     ['n:5/unit:8-binary', [1, 2, 3, 4, 5]],
@@ -110,11 +110,11 @@ var BINARY_TESTS = [
 suite('Binary',
     function() {
         BINARY_TESTS.forEach(function(p) {
-            var pattern = parse(p[0]);
-            var cpattern = compile(p[0]);
-            var prest = p[0] + ', _/binary';
-            var patternrest = parse(prest);
-            var cpatternrest = compile(prest);
+            const pattern = parse(p[0]);
+            const cpattern = compile(p[0]);
+            const prest = p[0] + ', _/binary';
+            const patternrest = parse(prest);
+            const cpatternrest = compile(prest);
             test(p[0], function() {
                 assert.strict.deepEqual({n: Buffer.from(p[1])},
                     match(pattern, Buffer.from(p[1])));
@@ -122,7 +122,7 @@ suite('Binary',
                     cpattern(Buffer.from(p[1])));
             });
             test(prest, function() {
-                var plusgarbage = p[1].concat([5, 98, 23, 244]);
+                const plusgarbage = p[1].concat([5, 98, 23, 244]);
                 assert.strict.deepEqual({n: Buffer.from(p[1])},
                     match(patternrest, Buffer.from(plusgarbage)));
                 assert.strict.deepEqual({n: Buffer.from(p[1])},
@@ -131,7 +131,7 @@ suite('Binary',
         });
     });
 
-var VAR_TESTS = [
+const VAR_TESTS = [
     ['size, n:size',
         [[[8, 5], 5],
             [[32, 0, 0, 0, 167], 167]]],
@@ -146,8 +146,8 @@ var VAR_TESTS = [
 suite('Environment',
     function() {
         VAR_TESTS.forEach(function(p) {
-            var pattern = parse(p[0]);
-            var cpattern = compile(p[0]);
+            const pattern = parse(p[0]);
+            const cpattern = compile(p[0]);
             p[1].forEach(function(tc) {
                 test(p[0], function() {
                     assert.strict.deepEqual(tc[1], match(pattern, Buffer.from(tc[0])).n);
@@ -159,7 +159,7 @@ suite('Environment',
         });
     });
 
-var STRING_TESTS = [
+const STRING_TESTS = [
     ['"foobar", n:8', 'foobarA', 'A'.charCodeAt(0)],
     ['n:8, "foobar", _/binary', 'CfoobarGARBAGE', 'C'.charCodeAt(0)],
     ['"foo, :-bar\\"", n:8, "another"', 'foo, :-bar"Zanother', 'Z'.charCodeAt(0)]
@@ -167,14 +167,14 @@ var STRING_TESTS = [
 
 suite('String', function() {
     STRING_TESTS.forEach(function(p) {
-        var pattern = parse(p[0]);
-        var cpattern = compile(p[0]);
+        const pattern = parse(p[0]);
+        const cpattern = compile(p[0]);
         test(p[0], function() {
-            var res = match(pattern, Buffer.from(p[1]));
+            const res = match(pattern, Buffer.from(p[1]));
             assert.strict.equal(res.n, p[2]);
         });
         test(p[0], function() {
-            var res = cpattern(Buffer.from(p[1]));
+            const res = cpattern(Buffer.from(p[1]));
             assert.strict.equal(res.n, p[2]);
         });
     });

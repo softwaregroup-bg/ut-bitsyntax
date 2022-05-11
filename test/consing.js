@@ -1,11 +1,11 @@
 /* eslint-env mocha */
-var assert = require('assert');
-var parse = require('../').parse;
-var build = require('../').build;
-var builder = require('../').builder;
-var write = require('../').write;
+const assert = require('assert');
+const parse = require('../').parse;
+const build = require('../').build;
+const builder = require('../').builder;
+const write = require('../').write;
 
-var TEST_CASES = [
+const TEST_CASES = [
     ['n:8', {n: 255}, [255]],
     ['n:16', {n: 0xf0f0}, [240, 240]],
     ['n:32', {n: 0x12345678}, [18, 52, 86, 120]],
@@ -25,19 +25,19 @@ function bufferToArray(buf) {
 
 suite('Construction', function() {
     TEST_CASES.forEach(function(c) {
-        var p = parse(c[0]);
+        const p = parse(c[0]);
         test(c[0], function() {
             assert.strict.deepEqual(c[2], bufferToArray(build(p, c[1])));
         });
         test(c[0], function() {
-            var buf = Buffer.from(1024);
-            var end = write(buf, 7, p, c[1]);
+            let buf = Buffer.from(1024);
+            const end = write(buf, 7, p, c[1]);
             buf = buf.slice(7, end);
             assert.strict.deepEqual(c[2], bufferToArray(buf));
         });
         test(c[0], function() {
-            var cons = builder(c[0]);
-            var buf = cons(c[1]);
+            const cons = builder(c[0]);
+            const buf = cons(c[1]);
             assert.strict.deepEqual(c[2], bufferToArray(buf));
         });
     });
