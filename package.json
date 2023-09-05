@@ -37,8 +37,7 @@
   },
   "devDependencies": {
     "tap": "^16.0.0",
-    "pegjs": "0.10.0",
-    "ut-tools": "^6.30.5"
+    "pegjs": "0.10.0"
   },
   "repository": {
     "type": "git",
