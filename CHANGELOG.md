@@ -1,3 +1,12 @@
+## [6.2.6](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.5...v6.2.6) (2023-09-05)
+
+
+### Bug Fixes
+
+* string size ([bf26bca](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/bf26bcaf163942f3a5c3f413aa6127f7de225c6d))
+
+
+
 ## [6.2.5](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.4...v6.2.5) (2022-05-11)
 
 
