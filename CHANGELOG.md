@@ -1,3 +1,12 @@
+## [6.2.7](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.6...v6.2.7) (2024-08-17)
+
+
+### Bug Fixes
+
+* change deprecated Buffer functions ([8588f1c](https://github.com/softwaregroup-bg/ut-bitsyntax/commit/8588f1c76ce1a89c93cd6a5e3daf52e995583b86))
+
+
+
 ## [6.2.6](https://github.com/softwaregroup-bg/ut-bitsyntax/compare/v6.2.5...v6.2.6) (2023-09-05)
 
 
